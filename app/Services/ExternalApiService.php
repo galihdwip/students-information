@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 class ExternalApiService
 {
     private string $url;
+
     private bool $verifySsl;
 
     public function __construct()
@@ -34,7 +35,7 @@ class ExternalApiService
 
             if ($response->failed()) {
                 throw new \Exception(
-                    'Failed to fetch external API: HTTP ' . $response->status()
+                    'Failed to fetch external API: HTTP '.$response->status()
                 );
             }
 
@@ -52,7 +53,7 @@ class ExternalApiService
 
             return [];
         } catch (\Throwable $e) {
-            Log::error('ExternalApiService error: ' . $e->getMessage());
+            Log::error('ExternalApiService error: '.$e->getMessage());
             throw $e;
         }
     }

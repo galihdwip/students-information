@@ -30,7 +30,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  */
 #[Fillable(['name', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
-class User extends Authenticatable implements PasskeyUser, JWTSubject
+class User extends Authenticatable implements JWTSubject, PasskeyUser
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable, PasskeyAuthenticatable, TwoFactorAuthenticatable;
@@ -48,11 +48,14 @@ class User extends Authenticatable implements PasskeyUser, JWTSubject
         ];
     }
 
-    public function getJWTIdentifier()
+    public function getJWTIdentifier(): mixed
     {
         return $this->getKey();
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getJWTCustomClaims(): array
     {
         return [];

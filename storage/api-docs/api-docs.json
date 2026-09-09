@@ -18,9 +18,7 @@
     "paths": {
         "/auth/register": {
             "post": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Register new user",
                 "description": "Mendaftarkan user baru dan langsung mengembalikan JWT Bearer token",
                 "operationId": "08136088c4862c313b35d6518bab8d3a",
@@ -73,9 +71,7 @@
         },
         "/auth/login": {
             "post": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Login user",
                 "description": "Login menggunakan email dan password untuk mendapatkan JWT token",
                 "operationId": "99d66635c4992aeaa6aa44ff653d0563",
@@ -84,10 +80,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "email",
-                                    "password"
-                                ],
+                                "required": ["email", "password"],
                                 "properties": {
                                     "email": {
                                         "type": "string",
@@ -120,9 +113,7 @@
         },
         "/auth/me": {
             "get": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Get current authenticated user profile",
                 "description": "Mengambil data profil user yang sedang login",
                 "operationId": "7edae2cdbaafc10dff8c9c4198b320a2",
@@ -143,9 +134,7 @@
         },
         "/auth/logout": {
             "post": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Logout user",
                 "description": "Logout dan meng-invalidate JWT Bearer token saat ini",
                 "operationId": "6abf3b64a4bc7838d56346f05a5153af",
@@ -166,9 +155,7 @@
         },
         "/auth/refresh": {
             "post": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Refresh JWT token",
                 "description": "Memperbarui token JWT yang masih valid dengan token baru",
                 "operationId": "e7ab7446393758bb71fd1946a349e500",
@@ -189,9 +176,7 @@
         },
         "/students/data": {
             "get": {
-                "tags": [
-                    "Students Data"
-                ],
+                "tags": ["Students Data"],
                 "summary": "Ambil semua data eksternal",
                 "description": "Mengambil data mahasiswa dari API eksternal (memerlukan Bearer Token)",
                 "operationId": "f80e99588b0d70a484b0b104f3b3ef52",
@@ -212,9 +197,7 @@
         },
         "/students/search": {
             "get": {
-                "tags": [
-                    "Students Data"
-                ],
+                "tags": ["Students Data"],
                 "summary": "Pencarian data eksternal",
                 "description": "Mencari data mahasiswa berdasarkan nama, NIM, atau YMD",
                 "operationId": "835a27d132870b02699010e919311023",
@@ -259,9 +242,7 @@
         },
         "/users": {
             "get": {
-                "tags": [
-                    "Users"
-                ],
+                "tags": ["Users"],
                 "summary": "Daftar pengguna",
                 "description": "Mengambil daftar data pengguna dengan pagination",
                 "operationId": "7e2f5799553ec93c9c43e2a58490d447",
@@ -280,9 +261,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Users"
-                ],
+                "tags": ["Users"],
                 "summary": "Tambah pengguna baru",
                 "description": "Menyimpan data pengguna baru ke database",
                 "operationId": "a1fce870c566eb5fc0cf3178ec5d2fed",
@@ -291,11 +270,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "name",
-                                    "email",
-                                    "password"
-                                ],
+                                "required": ["name", "email", "password"],
                                 "properties": {
                                     "name": {
                                         "type": "string",
@@ -334,9 +309,7 @@
         },
         "/users/{user}": {
             "get": {
-                "tags": [
-                    "Users"
-                ],
+                "tags": ["Users"],
                 "summary": "Detail pengguna",
                 "description": "Mengambil detail satu pengguna berdasarkan ID",
                 "operationId": "0b9800c6a2369ce94c1efa162edfa374",
@@ -366,9 +339,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Users"
-                ],
+                "tags": ["Users"],
                 "summary": "Update pengguna",
                 "description": "Memperbarui data pengguna",
                 "operationId": "caaec06bf33a577d630c028222869ee6",
@@ -423,9 +394,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Users"
-                ],
+                "tags": ["Users"],
                 "summary": "Hapus pengguna",
                 "description": "Menghapus data pengguna dari sistem",
                 "operationId": "a4e18f8517afcc062825920ffb6cd762",

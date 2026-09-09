@@ -4,24 +4,24 @@ REST API sederhana menggunakan Laravel dengan JWT Authentication, Swagger/OpenAP
 
 ## Tech Stack
 
-* Laravel
-* PHP 8.2+
-* PostgreSQL
-* JWT Authentication
-* Swagger / OpenAPI
-* REST API
+- Laravel
+- PHP 8.2+
+- PostgreSQL
+- JWT Authentication
+- Swagger / OpenAPI
+- REST API
 
 ## Features
 
-* User Registration
-* User Login menggunakan JWT
-* Get authenticated user
-* Logout
-* Refresh JWT Token
-* CRUD User
-* Get data dari external API secara realtime
-* Search data berdasarkan NAMA, NIM, dan YMD
-* Swagger API Documentation
+- User Registration
+- User Login menggunakan JWT
+- Get authenticated user
+- Logout
+- Refresh JWT Token
+- CRUD User
+- Get data dari external API secara realtime
+- Search data berdasarkan NAMA, NIM, dan YMD
+- Swagger API Documentation
 
 ## External API
 
@@ -223,11 +223,11 @@ routes/
 
 ## Notes
 
-* PostgreSQL digunakan untuk menyimpan data user.
-* Data dari external API tidak disimpan ke database.
-* External API dipanggil secara langsung ketika endpoint external digunakan.
-* JWT digunakan untuk authentication.
-* Swagger digunakan sebagai API documentation dan testing tool.
+- PostgreSQL digunakan untuk menyimpan data user.
+- Data dari external API tidak disimpan ke database.
+- External API dipanggil secara langsung ketika endpoint external digunakan.
+- JWT digunakan untuk authentication.
+- Swagger digunakan sebagai API documentation dan testing tool.
 
 ## License
 
